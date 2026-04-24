@@ -11,7 +11,7 @@ class Product(Base):
     price = Column(DECIMAL(10, 2))
     in_stock = Column(Boolean, default=True)
 
-    category_id = Column(Integer, ForeignKey('category_id'))
+    category_id = Column(Integer, ForeignKey('category.id'))
 
 class Category(Base):
     __tablename__ = 'category'
